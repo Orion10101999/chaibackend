@@ -1,4 +1,4 @@
-const express = require('express')
+import express from 'express'
 const app = express()
 const port = 3000
 
@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/twitter', (req, res) => {
-  res.send('hiteshdotcom')
+  res.send('hitesh dot com')
 })
 
 app.get('/login', (req, res) => {
