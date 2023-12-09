@@ -3,7 +3,6 @@ import dotenv from "dotenv"
 import express from 'express';
 import connectDB from './db/index.js';
 const app = express()
-const port = 4500
 dotenv.config({path:'./env'})
 connectDB()
 
@@ -24,6 +23,6 @@ app.get('/youtube', (req, res) => {
 })
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+app.listen(process.env.PORT || 3200, () => {
+  console.log(`Example app listening on port ${process.env.PORT}`)
 })
